@@ -1,0 +1,81 @@
+DEMO DATA 
+
+//Enter user data from postman or Register after running
+
+
+-- Insert data into users table
+INSERT INTO users (user_id, address, credit_card_info, email, internet_banking_info, member, mobile_number, name, password, supercoins) VALUES
+(1, 'Mumbai', NULL, 'mhatrerahul1821@gmail.com', NULL, 0x01, '9702236954', 'Rahul Mhatre', '$2a$10$Wl/0DSfQJHXYt.zvbZ0SDOyuHjOvjVFeJaPvxLYJDc8ALQrVn.PBa', 0),
+(2, 'Nagpur', NULL, 'ramagrawal1903@gmail.com', NULL, 0x00, '9876543210', 'Ram Agrawal', '$2a$10$ebem44NYKxouvyxcxfvM3OmhMGhA2oaMxZndFc3Np5fn.4bCXoBwS', 0),
+(3, '456 Park Avenue, Pune, India', NULL, 'adsureprajakta16@gmail.com', NULL, 0x01, '8765432109', 'Prajakta Adsure', '$2a$10$fhxk9NKKpzzcRZ44ftWsq.hPOqsJc.Q4QP2eWBNz6VzUbOqsXJOeq', 0),
+(4, '789 Green Street, Delhi, India', NULL, 'shantanujibhakate14@gmail.com', NULL, 0x01, '7654321098', 'Shantanu Jibhakate', '$2a$10$uZCKsNyO7nCaxiIhBzj8kOXgNax/Yhtz3m9/JSbtjKJosru85tiJm', 0),
+(5, '101 Tech Hub, Bangalore, India', NULL, 'sejal18lokhande@gmail.com', NULL, 0x00, '6543210987', 'Sejal Lokhande', '$2a$10$N0jDpk5S7Us2Sfzck2UoR.8Ts3KZm7e5CRNN/2xJeZqH3a7sMEY9C', 0);
+
+-- Insert data into categories table
+INSERT INTO categories (category_id, category_name, image_url) VALUES
+(1, 'Grocery', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWQQObeey0v769HDATRzF2L5dreeIcYjwugQ&s'),
+(2, 'Electronics', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_Mayitk94VS-fNOcycsbVpFDR0fohB6hgjA&s'),
+(3, 'Men\'s Fashion', 'https://img.freepik.com/free-photo/man-with-white-shopping-bags-coffee_23-2148316519.jpg'),
+(4, 'Women\'s Fashion', 'https://img.freepik.com/free-photo/portrait-curly-girl-with-red-lipstick-taking-notes-tablet-pink-background-with-dressees_197531-17620.jpg'),
+(5, 'Furniture', 'https://m.media-amazon.com/images/I/91XnABj1QrL.SX679.jpg'),
+(6, 'Household', 'https://images-eu.ssl-images-amazon.com/images/G/31/img23/HPC/CatPage/HHS_SBC_Tile_1.jpg');
+
+-- Insert data into subcategories table
+INSERT INTO subcategories (subcategory_id, images, subcategory_name, category_id) VALUES
+(1, 'https://img.pikbest.com/origin/06/05/45/53ypIkbEsTJ95.jpg!w700wp', 'Fruits', 1),
+(2, 'https://img.pikbest.com/origin/06/05/45/56ipIkbEsTFMk.jpg!f305cw', 'Vegetables', 1),
+(3, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyB6tvBhA5Ko9QmUzEuFk0twxfWakHcicHCg&s', 'Mobile Phones', 2),
+(4, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQf5zuHUh8Dj3tiH9ug_kdnA6Dzps9v-a07DA&s', 'Laptops', 2),
+(5, 'https://m.media-amazon.com/images/I/71uJmh8dJAL.SY741.jpg', 'Shirts', 3),
+(6, 'https://m.media-amazon.com/images/I/71XnABj1QrL.SX679.jpg', 'Jeans', 3),
+(7, 'https://m.media-amazon.com/images/I/71mX4WATh-L.SX569.jpg', 'Dresses', 4),
+(8, 'https://m.media-amazon.com/images/I/91XnABj1QrL.SX679.jpg', 'Jewelry', 4);
+
+-- Insert data into sub_subcategories table
+INSERT INTO sub_subcategories (sub_subcategory_id, images, sub_subcategory_name, subcategory_id) VALUES
+(1, 'https://m.media-amazon.com/images/I/51ebZJ+DR4L.SY342.jpg', 'Banana', 1),
+(2, 'https://m.media-amazon.com/images/I/61CuiyI4aBL.SX679.jpg', 'Papaya', 1),
+(3, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSa2sl7dUPVvVjy0u-bZEv79_LCW-hjkqDYiw&s', 'Samsung', 3),
+(4, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8tXP2wbOLL5WEWkg6W7hinvbat4Ecqpni7A&s', 'iPhone', 3),
+(5, 'https://m.media-amazon.com/images/I/71jG+e7roXL.SX679.jpg', 'Gaming Laptop', 4),
+(6, 'https://m.media-amazon.com/images/I/71jG+e7roXL.SX679.jpg', 'Business Laptop', 4);
+
+-- Insert data into products table
+INSERT INTO products (product_id, description, price, product_name, product_url, stock, category_id, sub_subcategory_id, subcategory_id) VALUES
+(1, 'Fresh organic bananas', 50, 'Banana', 'https://m.media-amazon.com/images/I/51ebZJ+DR4L.SY342.jpg', 100, 1, 1, 1),
+(2, 'Sweet and fresh papaya', 60, 'Papaya', 'https://m.media-amazon.com/images/I/61CuiyI4aBL.SX679.jpg', 50, 1, 2, 1),
+(3, 'Latest Samsung flagship smartphone', 65000, 'Samsung Galaxy S21', 'https://m.media-amazon.com/images/I/71lD7eGdW-L.SX679.jpg', 20, 2, 3, 3),
+(4, 'Apple iPhone 13 with A15 Bionic chip', 80000, 'iPhone 13', 'https://m.media-amazon.com/images/I/71yzJoE7WlL.SX679.jpg', 10, 2, 4, 3),
+(5, 'Gaming laptop with RTX 3060 graphics', 90000, 'Acer Predator Helios 300', 'https://m.media-amazon.com/images/I/71jG+e7roXL.SX679.jpg', 5, 2, 5, 4),
+(6, 'Business laptop with Intel Core i7 and long battery life', 75000, 'Dell Latitude 7420', 'https://m.media-amazon.com/images/I/71jG+e7roXL.SX679.jpg', 8, 2, 6, 4);
+
+-- Insert data into cart table
+INSERT INTO cart (cart_id, quantity, product_id, user_id) VALUES
+(2, 1, 3, 2),
+(3, 3, 2, 3),
+(4, 1, 4, 4),
+(5, 2, 5, 5),
+(29, 2, 3, 1),
+(31, 2, 1, 1);
+
+-- Insert data into orders table
+INSERT INTO orders (order_id, order_date, total_amount, user_id) VALUES
+(1, '2025-02-16 23:06:37', 500, 1),
+(2, '2025-02-16 23:06:37', 1200.5, 2),
+(3, '2025-02-16 23:06:37', 850.75, 3),
+(4, '2025-02-16 23:06:37', 2000, 4);
+
+
+-- Insert data into orderdetails table
+INSERT INTO orderdetails (order_details_id, price, quantity, order_id, product_id) VALUES
+(1, 500, 1, 1, 1),
+(2, 1200.5, 2, 2, 3),
+(3, 850.75, 1, 3, 4),
+(4, 2000, 2, 4, 5);
+
+-- Insert data into paymentdetails table
+INSERT INTO paymentdetails (payment_id, payment_date, payment_method, total_amount, order_id, user_id) VALUES
+(1, '2025-02-16 23:10:00', 'Credit Card', 500, 1, 1),
+(2, '2025-02-16 23:11:00', 'Internet Banking', 1200.5, 2, 2),
+(3, '2025-02-16 23:12:00', 'Debit Card', 850.75, 3, 3),
+(4, '2025-02-16 23:13:00', 'UPI', 2000, 4, 4);
